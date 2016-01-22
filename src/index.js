@@ -17,7 +17,7 @@ let EpisodeItem = (props) => (
             <span>{props.episode}</span>
             <div>{props.title}</div>
         </a>
-        <i className="fa fa-eye watched {props.watched}"></i>
+        <i className={[style['watched'], 'fa', 'fa-eye', 'watched', props.watched?'true':''].join(' ')}></i>
     </li>
 );
 
