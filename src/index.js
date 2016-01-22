@@ -79,19 +79,20 @@ export default class ShowInfo extends Component {
     };
 
     render() {
-        let episodes = this.state.torrents[this.state.season];
+        let state = this.state;
+        let episodes = state.torrents[state.season];
         return (
             <div className={style.info}>
                 <SeasonList  className={style.seasons}
-                             torrents={this.state.torrents}
-                             onClick={(o, i) => {this.setState({season: i})}}
+                             torrents={state.torrents}
+            onClick={(o, i) => {state.season !== i && this.setState({season: i, episode: 1})}}
                 />
                 <div className={style.episodes}>
                 <EpisodeList className={style.episodesList}
                              episodes={episodes}
                              onClick={(o) => {this.setState({episode: o.episode})}}/>
                     <div className={style['right-container']}>
-                        <EpisodeInfo {...episodes[this.state.episode]}/>
+                        <EpisodeInfo {...episodes[state.episode]}/>
                         <div className={style['play-now']}>
                         </div>
                     </div>
