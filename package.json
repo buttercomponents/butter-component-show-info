@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/buttercomponents/butter-component-show-info/issues"
   },
-  "homepage": "https://github.com/buttercomponents/butter-component-show-info",,x
+  "homepage": "https://github.com/buttercomponents/butter-component-show-info",
+  "devDependencies": {
+    "butter-component-builder": "*"
+  }
 }
